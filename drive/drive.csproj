@@ -69,7 +69,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="AuthPage.xaml">
+	  <MauiXaml Update="LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="RegistrationPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

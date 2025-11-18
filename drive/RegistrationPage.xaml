@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="drive.RegistrationPage"
+             >
+    
+    
+    <Grid ColumnDefinitions="*,*" BackgroundColor="#EBECEF">
+        
+        <!--фон и градиент-->
+        <Frame Grid.Column="0" BackgroundColor="#EBECEF" HorizontalOptions="Fill" VerticalOptions="Fill" 
+               HasShadow="False" BorderColor="Transparent"  ></Frame>
+
+        <Frame Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Fill" 
+               HasShadow="False" BorderColor="Transparent">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#799DC8"
+                              Offset="0.1" />
+                    <GradientStop Color="#041C41"
+                              Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+        </Frame>
+    
+    <!--форма поверх. рег-ия-->
+        <Frame CornerRadius="28" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="White">
+            <StackLayout Background="White" VerticalOptions="Center" HorizontalOptions="Center"  WidthRequest="400" 
+                     Spacing="20" Padding="15">
+
+            <Label Text="Создать учетную запись" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center" TextColor="Black"/>
+
+            <VerticalStackLayout Spacing="15" HorizontalOptions="Center" VerticalOptions="Center">
+
+                <!-- name -->
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Имя" FontSize="14" TextColor="#222020"/>
+                    <Entry TextColor="Black"  BackgroundColor="LightGrey" 
+                              HeightRequest="45"/>
+                </VerticalStackLayout>
+
+                <!-- phone email nahrena -->
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Телефон/Email" FontSize="14" TextColor="#222020"/>
+                    <Entry Placeholder="+ 7 (xxx) xxx xx xx"
+                        TextColor="Black" BackgroundColor="LightGrey" 
+                              HeightRequest="45"/>
+                </VerticalStackLayout>
+
+                <!-- passw -->
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Пароль" FontSize="14" TextColor="#222020"/>
+                    <Grid>
+                        <Entry x:Name="PasswordEntry" 
+                            IsPassword="True"
+                                TextColor="Black" BackgroundColor="LightGrey"
+                                  HeightRequest="45"/>
+                        <Button x:Name="ISVisiblePassword_button" Clicked="ISVisiblePassword_button_Clicked"
+                                Text="👁" BackgroundColor="Transparent" BorderColor="Transparent"
+                                FontSize="12" VerticalOptions="Center" HorizontalOptions="End"
+                                 WidthRequest="30" HeightRequest="30" Margin="0,0,10,0"/>
+                    </Grid>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Пoдтверждение пароля" FontSize="14" TextColor="#222020"/>
+                    <Grid>
+                        <Entry x:Name="AgainPasswordEntry" 
+                            IsPassword="True"
+                                TextColor="Black" BackgroundColor="LightGrey" 
+                                HeightRequest="45"/>
+                        <Button x:Name="AGAIN_ISVisiblePassword_button" Clicked="AGAIN_ISVisiblePassword_button_Clicked"
+                                Text="👁" BackgroundColor="Transparent" BorderColor="Transparent"
+                                FontSize="12" VerticalOptions="Center" HorizontalOptions="End"
+                                 WidthRequest="30" HeightRequest="30" Margin="0,0,10,0"/>
+                    </Grid>
+                </VerticalStackLayout>
+
+
+            </VerticalStackLayout>
+
+            <!-- contin -->
+            <Button x:Name="ContinueRegistration_button" Clicked="ContinueRegistration_button_Clicked"
+                Text="Далее" FontSize="14" BackgroundColor="#007DFA" TextColor="White"
+                        CornerRadius="7" HeightRequest="45" 
+                        VerticalOptions="Center" HorizontalOptions="Center"
+                        Margin="0,10,0,0"/>
+
+            <!-- link to login -->
+            <StackLayout Orientation="Horizontal" 
+                             HorizontalOptions="Center" 
+                             Spacing="5"
+                             Margin="0,10,0,0">
+                <Label Text="У вас уже есть учетная запись?" FontSize="14" TextColor="#999898"/>
+                <Label Text="Войти" FontSize="14" TextColor="#3C9BFB">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Login_button_Clicked"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+            
+        </StackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>
