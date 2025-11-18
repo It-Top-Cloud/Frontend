@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="drive.MainPage">
+
+    <!--смерть неизбежна-->
+
+    <StackLayout Padding="10" BackgroundColor="#F8FAFD">
+        
+        <!--верхняя плашечка-->
+        <Grid BackgroundColor="#F8FAFD" HeightRequest="45">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/> <!--под поисковую строку-->
+                <ColumnDefinition Width="Auto"/> <!--под настройки-->
+                <ColumnDefinition Width="Auto"/> <!--под аккаунт-->
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" WidthRequest="160">
+                
+            </Button>
+
+            <Entry Grid.Column="1" 
+                   Placeholder=" ⌕ Поиск по диску"  BackgroundColor="#DEDEDE"
+                   Margin="10,0" HeightRequest="36" VerticalOptions="Center"
+                   TextColor="Black"/>
+
+            <ImageButton Grid.Column="2" 
+                Source="settings.png" BackgroundColor="Transparent" WidthRequest="45" HorizontalOptions="End"/>
+
+            <ImageButton Grid.Column="3" 
+                Source="profile.png" BackgroundColor="Transparent" WidthRequest="45" HorizontalOptions="End"/>
+        </Grid>
+        
+        <!--левая менюшка (?)-->
+        
+        <Button x:Name="CreateButton" Text="＋ Создать" FontSize="14" HorizontalOptions="Start" Margin="0, 10, 0, 10"
+                BackgroundColor="#DEDEDE" BorderColor="Transparent"
+                MinimumHeightRequest="40" MaximumWidthRequest="100" CornerRadius="14"/> <!--кликабельноть доб-->
+        
+        <!--наверное можно тогда и верхнюю кнопку в грид впихнуть, если уж делать через него-->
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/> <!--хз как правильно впихнуть, ИСПРАВИТЬ-->
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <!--или без грид вообще..-->
+            </Grid.RowDefinitions>
+        </Grid>
+
+        <Button x:Name="PersonalButton" Text="Личный" FontSize="14" HorizontalOptions="Start" 
+                BackgroundColor="Transparent" BorderColor="Transparent"
+                MinimumHeightRequest="30" MaximumWidthRequest="120"/>
+        <Button x:Name="MyDriveButton" Text="Мой диск" FontSize="14" HorizontalOptions="Start" 
+                BackgroundColor="Transparent" BorderColor="Transparent"
+                MinimumHeightRequest="30" MaximumWidthRequest="120"/>
+        
+        
+
+        <Button x:Name="ResentlyButton" Text="Недавние" FontSize="14" HorizontalOptions="Start" 
+                BackgroundColor="Transparent" BorderColor="Transparent"
+                MinimumHeightRequest="30" MaximumWidthRequest="120"/>
+
+        <Button x:Name="MarkedButton" Text="Помеченные" FontSize="14" HorizontalOptions="Start" 
+                BackgroundColor="Transparent" BorderColor="Transparent"
+                MinimumHeightRequest="30" MaximumWidthRequest="120"/>
+
+        
+        
+        <Button x:Name="SpamButton" Text="Спам" FontSize="14" HorizontalOptions="Start" 
+                BackgroundColor="Transparent" BorderColor="Transparent"
+                MinimumHeightRequest="30" MaximumWidthRequest="120"/>
+        
+        <Button x:Name="TrashButton" Text="Корзина" FontSize="14" HorizontalOptions="Start" 
+                BackgroundColor="Transparent" BorderColor="Transparent"
+                MinimumHeightRequest="30" MaximumWidthRequest="120"/>
+        
+        <Button x:Name="StorageButton" Text="Хранилище" FontSize="14" HorizontalOptions="Start" 
+                BackgroundColor="Transparent" BorderColor="Transparent"
+                MinimumHeightRequest="30" MaximumWidthRequest="120"/>
+
+        
+        <!--центрирование текста спросить. я немощь-->
+        <Button x:Name="ResizeStorageButton" Margin="0,20,0,0" LineBreakMode="CharacterWrap"
+                Text="Увеличить объем хранилища" FontSize="14" HorizontalOptions="Start" 
+                BackgroundColor="#F8FAFD" BorderColor="#CACACA" CornerRadius="20" BorderWidth="1"
+                MinimumHeightRequest="30" MaximumWidthRequest="160"/>
+        
+        
+        
+        
+    </StackLayout>
+    
+    <!--смерти нет-->
+</ContentPage>
