@@ -63,16 +63,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="MainPageDrive.xaml.cs">
+	  <Compile Update="MainPage\MainPageDrive.xaml.cs">
 	    <DependentUpon>MainPageDrive.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="LoginPage.xaml">
+	  <MauiXaml Update="Auth\CallPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="RegistrationPage.xaml">
+	  <MauiXaml Update="Auth\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Auth\RegistrationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\DefaultStyles.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="drive.MainPage">
+
+    <!--смерть неизбежна-->
+
+    <StackLayout Padding="10" BackgroundColor="#F8FAFD">
+        
+        <!--верхняя плашечка-->
+        <Grid BackgroundColor="#F8FAFD" HeightRequest="45">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/> <!--под поисковую строку-->
+                <ColumnDefinition Width="Auto"/> <!--под настройки-->
+                <ColumnDefinition Width="Auto"/> <!--под аккаунт-->
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" WidthRequest="160">
+                
+            </Button>
+
+            <Entry Grid.Column="1" 
+                   Placeholder=" ⌕ Поиск по диску"  BackgroundColor="#DEDEDE"
+                   Margin="10,0" HeightRequest="36" VerticalOptions="Center"
+                   TextColor="Black"/>
+
+            <ImageButton Grid.Column="2" 
+                Source="settings.png" BackgroundColor="Transparent" WidthRequest="45" HorizontalOptions="End"/>
+
+            <ImageButton Grid.Column="3" 
+                Source="profile.png" BackgroundColor="Transparent" WidthRequest="45" HorizontalOptions="End"/>
+        </Grid>
+        
+        <!--левая менюшка (?)-->
+        
+        <Button x:Name="CreateButton" Text="＋ Создать" Style="{StaticResource DefButtonMP}" MaximumWidthRequest="100" CornerRadius="14"/> <!--кликабельноть доб-->
+
+        <Button x:Name="PersonalButton" Text="Личный" Style="{StaticResource DefButtonMP}"/>
+        <Button x:Name="MyDriveButton" Text="Мой диск" Style="{StaticResource DefButtonMP}"/>
+
+        <Button x:Name="ResentlyButton" Text="Недавние" Style="{StaticResource DefButtonMP}"/>
+
+        <Button x:Name="MarkedButton" Text="Помеченные" Style="{StaticResource DefButtonMP}"/>
+
+        <Button x:Name="SpamButton" Text="Спам" Style="{StaticResource DefButtonMP}"/>
+
+        <Button x:Name="TrashButton" Text="Корзина" Style="{StaticResource DefButtonMP}"/>
+
+        <Button x:Name="StorageButton" Text="Хранилище" Style="{StaticResource DefButtonMP}"/>
+
+        
+        <Button x:Name="ResizeStorageButton" Margin="0,20,0,0" LineBreakMode="CharacterWrap"
+                Text="Увеличить объем хранилища" FontSize="14" HorizontalOptions="Start" 
+                BackgroundColor="#F8FAFD" BorderColor="#CACACA" CornerRadius="20" BorderWidth="1"
+                MinimumHeightRequest="30" MaximumWidthRequest="160"/>
+          
+    </StackLayout>
+    
+    <!--смерти нет-->
+</ContentPage>

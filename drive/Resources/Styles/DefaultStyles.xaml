@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Color x:Key="MiniText">#999898</Color>
+    <Color x:Key="LinksColor">#3C9BFB</Color>
+    
+    <LinearGradientBrush x:Key="GradientBackground" EndPoint="1,0">
+        <GradientStop Color="#D0E4F2" Offset="0.1" />
+        <GradientStop Color="#FDE6D9" Offset="1.0" />
+    </LinearGradientBrush>
+    
+    <!--pages def-->
+    <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+        <Setter Property="Background" Value="{StaticResource GradientBackground}"/>
+        <Setter Property="Padding" Value="10"/>
+    </Style>
+
+    <!--for big text-->
+    <Style x:Key="BigLabels" TargetType="Label">
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="TextColor" Value="Black"/>
+    </Style>
+
+    <!--mini lab-->
+    <Style x:Key="DefLabels" TargetType="Label">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="TextColor" Value="#222020"/>
+        <Setter Property="Margin" Value="10,0,0,0"/>
+    </Style>
+    <!--log lab-->
+    <Style x:Key="DefLabels2" TargetType="Label">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="TextColor" Value="#222020"/>
+        <Setter Property="Margin" Value="17,0,17,0"/>
+    </Style>
+
+    <!--for etries-->
+    <Style x:Key="EntriesStyle" TargetType="Entry">
+        <Setter Property="TextColor" Value="Black"/>
+        <Setter Property="BackgroundColor" Value="#e0e0e0"/>
+        <Setter Property="HeightRequest" Value="45"/>
+        <Setter Property="WidthRequest" Value="250"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="MinimumWidthRequest" Value="200"/>
+    </Style>
+
+    <!--кнопка под глаз у парля-->
+    <Style x:Key="ShowButton" TargetType="ImageButton">
+        <Setter Property="BackgroundColor" Value="Transparent"/>
+        <Setter Property="BorderColor" Value="Transparent"/>
+        <Setter Property="HorizontalOptions" Value="End"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="HeightRequest" Value="30"/>
+        <Setter Property="WidthRequest" Value="30"/>
+        <Setter Property="Margin" Value="0,0,5,0"/>
+    </Style>
+
+    <Style x:Key="ShowButton2" TargetType="ImageButton">
+        <Setter Property="BackgroundColor" Value="Transparent"/>
+        <Setter Property="BorderColor" Value="Transparent"/>
+        <Setter Property="HorizontalOptions" Value="End"/>
+        <Setter Property="HeightRequest" Value="30"/>
+        <Setter Property="WidthRequest" Value="30"/>
+        <Setter Property="Margin" Value="0,0,10,0"/>
+    </Style>
+
+    
+    
+    <!--MAIN PAGE-->
+    <Style x:Key="DefButtonMP" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="Transparent"/>
+        <Setter Property="BorderColor" Value="Transparent"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="TextColor" Value="Black"/>
+        <Setter Property="BorderColor" Value="Transparent"/>
+        <Setter Property="HorizontalOptions" Value="Start"/>
+        <Setter Property="MinimumHeightRequest" Value="40"/>
+        <Setter Property="MaximumWidthRequest" Value="120"/>
+        
+
+    </Style>
+</ResourceDictionary>
