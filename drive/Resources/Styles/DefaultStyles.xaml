@@ -6,8 +6,8 @@
     <Color x:Key="LinksColor">#3C9BFB</Color>
     
     <LinearGradientBrush x:Key="GradientBackground" EndPoint="1,0">
-        <GradientStop Color="#D0E4F2" Offset="0.1" />
-        <GradientStop Color="#FDE6D9" Offset="1.0" />
+        <GradientStop Color="#417bf0" Offset="0.1" />
+        <GradientStop Color="#c9a0e8" Offset="1.0" />
     </LinearGradientBrush>
     
     <!--pages def-->
