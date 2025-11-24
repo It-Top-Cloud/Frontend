@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="drive.Auth.CallPage"
+             Background="{StaticResource GradientBackground}">
+    
+    <Grid VerticalOptions="Center" HorizontalOptions="Center">
+        <Frame BackgroundColor="White" Padding="30" CornerRadius="28" BorderColor="Transparent"
+               HorizontalOptions="Center" VerticalOptions="Center">
+            <VerticalStackLayout Spacing="25" HorizontalOptions="Fill" VerticalOptions="Fill" >
+                <Label Text="Позвоните на этот номер для завершения регистрации" 
+                       Style="{StaticResource BigLabels}"/>
+                <Button BackgroundColor="#222020" Text="+7(499)-555-55-55" TextColor="White"
+                       WidthRequest="250" HeightRequest="45" CornerRadius="5"/>
+
+                <Button x:Name="FinishReg" Text="Завершить регистрацию" Clicked="FinishReg_Clicked"
+                        BackgroundColor="Black" TextColor="White" FontSize="14"
+                        MinimumWidthRequest="230" HeightRequest="45"
+                        HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>
