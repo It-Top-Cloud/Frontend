@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using drive.Services.Auth;
+using drive.Services.BaseAPI;
+using Microsoft.Extensions.Logging;
 
 namespace drive
 {
@@ -18,6 +20,8 @@ namespace drive
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+            builder.Services.AddSingleton<IApiService, ApiService>();
+            builder.Services.AddScoped<IAuthService, AuthService>();
 
             return builder.Build();
         }
